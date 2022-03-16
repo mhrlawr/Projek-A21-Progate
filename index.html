@@ -6,58 +6,104 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="desain.css">
         <link rel="stylesheet" href="slider.css">
+        <link rel="stylesheet" href="responsive_design.css">
         <title>A-21 Progate Team.</title>
     </head>
     <body>
 
-        <header>
-            <!-- <div class="containter"> -->
-            <div class="header-right">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li class="dropdown">
-                        <a href="#">Members</a>
-                        <ul class="isi-dropdown">
-                            <li><a href="#">Muhammad Bangun Surya Sirait</a></li>
-                            <li><a href="#">Muhamad Haerul Anwar</a></li>
-                            <li><a href="#">Marsila Hanum</a></li>
-                            <li><a href="#">Mohammad Tholabah</a></li>
-                            <li><a href="#">Muhammad Iqbal Rais</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Home</a></li>
-                </ul>
-            </div>
-            <!-- </div> -->
-
-            <div class="header-left">
-                <img src="E:\BELAJAR HTML\PROJEK\image\logo-a21.png"
-                    class="logo-a21">
-            </div>
+        <header class="header">
+            <img src="image\logo-a21.png" class="logo">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </header>
 
         <div class="slider">
-            <figure>
-                <div class="img-slide">
-                    <img src="E:\BELAJAR HTML\PROJEK\image\1.jpeg">
+            <div class="container">
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>Muhammad Bangun Surya Sirait</h1>
+                        <p>Medan, Sumatera Utara</p>
+                    </div>
+                    <img src="image\Surya.jpg"
+                        style="width: 100%; height: 100%;">
                 </div>
 
-                <div class="img-slide">
-                    <img src="E:\BELAJAR HTML\PROJEK\image\2.jpg">
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>Muhamad Haerul Anwar</h1>
+                        <p>Serang, Banten</p>
+                    </div>
+                    <img src="image\Haerul.jpg"
+                        style="width: 100%; height: 100%;">
                 </div>
 
-                <div class="img-slide">
-                    <img src="E:\BELAJAR HTML\PROJEK\image\3.jpg">
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>Mursila Hanum</h1>
+                        <p>Lampung</p>
+                    </div>
+                    <img src="image\Hanum.jpg"
+                        style="width: 100%; height: 100%;">
                 </div>
 
-                <div class="img-slide">
-                    <img src="E:\BELAJAR HTML\PROJEK\image\4.jpeg">
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>Muhammad Iqbal Rais</h1>
+                        <p>Kutai Kartanegara, Kalimantan Timur</p>
+                    </div>
+                    <img src="image\Iqbal.jpg"
+                        style="width: 100%; height: 100%;">
                 </div>
 
-                <div class="img-slide">
-                    <img src="E:\BELAJAR HTML\PROJEK\image\5.jpeg">
+                <div class="myslide fade">
+                    <div class="txt">
+                        <h1>Mohammad Tholabah</h1>
+                        <p>Surabaya, Jawa Timur</p>
+                    </div>
+                    <img src="image\Abimanyu.jpg"
+                        style="width: 100%; height: 100%;">
                 </div>
-            </figure>
+            </div>
+
+            <div class="dotsbox" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
         </div>
+
+        <script src="filejs.js"></script>
+
+        <div class="message-wrapper">
+            <div class="container">
+                <div class="heading">
+                    <h2>WELCOME TO</h2>
+                    <h3>A - 21 PROGATE TEAM.</h3>
+                    <p>Web ini dibuat untuk memenuhi tugas projek Front End
+                        Developer dari Progate yang diselenggarakan<br>
+                        oleh Digitalent Kominfo. Web ini dibuat dan didesain
+                        oleh kelompok A-21 kelas E.</p>
+                </div>
+                <span class="btn message">MORE INFO!</span>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <img src="image\logo-a21.png" class="logo">
+            <ul class="menu">
+                <li><a href="#about" class="menu-footer">Hubungi Kami</a></li>
+                <li><a href="#careers" class="menu-footer">Tentang</a></li>
+                <li><a href="#contact" class="menu-footer">Jl. Front End, Blok E No. A-21, Indonesia</a></li>
+            </ul>
+        </footer>
+
     </body>
 </html>

@@ -1,96 +1,118 @@
-.slider {
-    overflow: hidden;
-    height: 409px;
+.slider{
+	position: relative;
+	width: 100%;
+	background: #2c3e50; /* darckblue */
+}
+.myslide{
+	height: 655px;
+	display: none;
+	overflow: hidden;
 }
 
-.slider figure div {
-    width: 20%;
-    float: left;
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/* /2 */
+
+/* javascript */
+.active, .dot:hover{
+	border-color: #00a7ff; /* blue */
+}
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-.slider figure img {
-    width: 100%;
-    float: left;
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
 }
 
-.slider figure {
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    animation: 20s slidy infinite;
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
 }
 
-@keyframes slidy {
-    0% {
-        left: 0%
-    }
 
-    10% {
-        left: 0%;
-    }
-
-    12% {
-        left: -100%;
-    }
-
-    22% {
-        left: -100%;
-    }
-
-    24% {
-        left: -200%;
-    }
-
-    34% {
-        left: -200%;
-    }
-
-    36% {
-        left: -300%;
-    }
-
-    46% {
-        left: -300%;
-    }
-
-    48% {
-        left: -400%;
-    }
-
-    58% {
-        left: -400%;
-    }
-
-    60% {
-        left: -300%;
-    }
-
-    70% {
-        left: -300%;
-    }
-
-    72% {
-        left: -200%;
-    }
-
-    82% {
-        left: -200%;
-    }
-
-    84% {
-        left: -100%;
-    }
-
-    94% {
-        left: -100%;
-    }
-
-    96% {
-        left: 0%;
-    }
-
-    100% {
-        left: 0%;
-    }
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 5%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+    padding: 14px 20px;
+    background-color: rgb(207, 201, 201);
+    opacity: 0.7;
+    border-radius: 7px;
 }
+
+
+/* NAMA ANGGOTA */
+@-webkit-keyframes posi {
+  from {left: 15%;}
+  to {left: 5%;}
+}
+
+@keyframes posi {
+  from {left: 15%;}
+  to {left: 5%;}
+}
+
+.txt h1{
+	color: #000000; /* blue */
+	font-size: 30px;
+	margin-bottom: 5px;
+}
+.txt p{
+	font-weight: bold;
+    color:black;
+	font-size: 20px;
+    padding-left: 2px;
+}
+/* /3 */
+
+/* 4 */
+.myslide img {
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+	object-fit: cover;
+	width: 100%;
+  	animation-duration: 40s;
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+/* /4 */
